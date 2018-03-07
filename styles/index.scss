@@ -1,0 +1,11 @@
+$gray-filter: grayscale(100%);
+$color-filter: grayscale(0%);
+
+.luna {
+  filter: $gray-filter;
+  border-radius: 1px;
+}
+
+.luna:hover {
+  filter: $color-filter;
+}

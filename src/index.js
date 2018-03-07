@@ -1,5 +1,4 @@
 import imageViewer from './image_viewer';
+import scss from '../styles/index.scss';
 
-const total = sum(10, 5);
-
-console.log(total);
+console.log('hello');
