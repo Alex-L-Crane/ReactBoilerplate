@@ -15,6 +15,8 @@ From the directory you wish to clone into using command line:
 
 - View the project at http://localhost:8080
 
+- *Note: Webpack server will auto reaload changes for local view, but it will not rebuild the project automatically. To build the project for deployment:* `npm run build`
+
 
 ### Folder structure
 
