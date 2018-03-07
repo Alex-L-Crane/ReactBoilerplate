@@ -20,7 +20,7 @@ From the directory you wish to clone into using command line:
 
 ### Folder structure
 
- - **src**: javascript goes here
- - **assets**: images and other assets go here
- - **style**: css and scss go here
+ - **src**: javascript goes in this folder
+ - **assets**: images and other assets go in this folder
+ - **style**: css and scss go in this folder
  - **build**: all outputted code and assets end up in this folder after build
