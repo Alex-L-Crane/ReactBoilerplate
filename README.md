@@ -14,3 +14,11 @@ From the directory you wish to clone into using command line:
 `npm run serve`
 
 - View the project at http://localhost:8080
+
+
+### Folder structure
+
+ - src folder: javascript goes here
+ - assets folder: images and otehr assets go here
+ - style: css and scss go here
+ - build: all outputted code and assets end up in this folder after build
