@@ -1,7 +1,6 @@
-import big from '../assets/big.jpg';
-import small from '../assets/small.jpg';
+import luna from '../assets/luna.jpg';
 
-const bigImage = document.createElement('img');
-bigImage.src = big;
+const lunaImage = document.createElement('img');
+lunaImage.src = luna;
 
-document.body.appendChild(bigImage);
+document.body.appendChild(lunaImage);
