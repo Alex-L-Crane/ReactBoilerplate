@@ -1,4 +1,10 @@
-import imageViewer from './image_viewer';
 import scss from '../styles/index.scss';
 
-console.log('hello');
+const button = document.createElement('button');
+button.innerText = 'Click me';
+button.onclick = () => {
+  // System.import splits bundle.js files for efficiency
+  System.import('./image_viewer').then(module => {});
+};
+
+document.body.appendChild(button);
