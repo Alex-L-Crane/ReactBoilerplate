@@ -3,7 +3,14 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const VENDOR_LIBS = ['faker', 'lodash', 'react', 'react-dom', 'react-router'];
+const VENDOR_LIBS = [
+  'faker',
+  'lodash',
+  'react',
+  'react-dom',
+  'react-router',
+  'react-router-dom'
+];
 
 const config = {
   entry: {
@@ -12,7 +19,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -38,6 +46,10 @@ const config = {
         ]
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './'
   },
   plugins: [
     new ExtractTextPlugin('application.[chunkhash].css'),
