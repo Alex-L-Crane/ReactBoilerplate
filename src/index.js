@@ -1,41 +1,53 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import scss from '../styles/index.scss';
 
-class Luna extends Component {
+class StaticImage extends Component {
   clickButton() {
     // System.import splits bundle.js files for efficiency
-    System.import('./image_viewer').then(module => {});
+    System.import('./static_image').then(module => {});
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.clickButton}>Click me</button>
+        <h2>Render static image</h2>
+        <button onClick={this.clickButton}>Show image</button>
+        <div className="luna-wrapper" />
       </div>
     );
   }
 }
 
-class Hello extends Component {
+class Unsplash extends Component {
   render() {
-    return <div>Hello!</div>;
-  }
-}
-
-class Goodbye extends Component {
-  render() {
-    return <div>Goodbye!</div>;
+    return (
+      <div>
+        <h2>Unsplash images</h2>
+      </div>
+    );
   }
 }
 
 ReactDOM.render(
   <BrowserRouter>
     <div>
-      <Route path="/hello" component={Hello} />
-      <Route path="/goodbye" component={Goodbye} />
-      <Luna />
+      <ul>
+        <li>
+          <Link to="/">Static Image</Link>
+        </li>
+        <li>
+          <Link to="/unsplash-feed">Unsplash Images</Link>
+        </li>
+      </ul>
+
+      <div>
+        <Switch>
+          <Route path="/unsplash-feed" component={Unsplash} />
+          <Route path="/" component={StaticImage} />
+        </Switch>
+      </div>
     </div>
   </BrowserRouter>,
   document.querySelector('.app')
