@@ -11,7 +11,7 @@ From the directory you wish to clone into using command line:
 `npm install`
 
  - Collect and transpile files in the project and run dev server: 
-`npm run serve`
+`npm run start`
 
 - View the project at http://localhost:8080
 
