@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "artistName": "Nils Frahm",
+      "location": "Germany",
+      "genres": ["Dance", "Electronic", "Ambient"]
+    },
+    {
+      "id": 2,
+      "artistName": "Deftones",
+      "location": "USA",
+      "genres": ["Metal", "Nu Metal", "Rock"]
+    }
+]
